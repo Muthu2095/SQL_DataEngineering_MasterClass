@@ -38,6 +38,23 @@ The second INSERT statement will fail because the ride_id is a PRIMARY KEY, and 
 
 ---
 
+1a.COMPOSITE Key
+combination of two columns as a primary key 
+==========================
+
+Example:
+sql
+CREATE TABLE rides (
+    ride_id INT 
+    driver_id INT NOT NULL,
+    rider_id INT NOT NULL,
+    pickup_location VARCHAR(100) NOT NULL,
+    dropoff_location VARCHAR(100) NOT NULL,
+    ride_date DATETIME NOT NULL,
+    fare DECIMAL(10, 2) NOT NULL
+    primary key (ride_id,driver_id)
+);
+
 2. UNIQUE Constraint 
 =======================
 The UNIQUE constraint ensures that no two rows can have the same value in a column, but allows NULL values. If you try to insert a duplicate value in a column with a UNIQUE constraint, it will fail.
