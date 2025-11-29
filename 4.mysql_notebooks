@@ -7,11 +7,11 @@ Perfect for both beginners and professionals to master SQL easily. Check it out 
 https://www.python.org/downloads/
 
 mkdir sql_notebook
-cd sql_notebook
+cd sql_notebook -- to login the note book 
 
-python -m venv env
+python -m venv env   
 
-env\Scripts\activate
+env\Scripts\activate -- to active it 
 
 pip install --upgrade pip
 
@@ -23,7 +23,7 @@ pip install prettytable==0.7.2
 
 pip install mysql-connector-python
 
-jupyter notebook
+jupyter notebook -- after coming to env need to connect note book
 
 %load_ext sql
 %sql mysql+mysqlconnector://root:root@localhost/test
