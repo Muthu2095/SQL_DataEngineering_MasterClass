@@ -1,0 +1,9 @@
+window function with subquery 
+
+SELECT EmployeeID, Name, Department, HireDate
+FROM (
+    SELECT EmployeeID, Name, Department, HireDate,
+    ROW_NUMBER() OVER (PARTITION BY Department ORDER BY HireDate DESC) as rownum
+    FROM employees
+) AS subquery
+WHERE rownum = 1;
