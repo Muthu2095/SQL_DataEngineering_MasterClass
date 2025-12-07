@@ -6,7 +6,7 @@ Perfect for both beginners and professionals to master SQL easily. Check it out 
 ==========================
 When trying to insert a duplicate value into a PRIMARY KEY column, it will fail because primary keys must be unique.
 
-Example:
+Example:iii
 sql
 CREATE TABLE rides (
     ride_id INT PRIMARY KEY,
